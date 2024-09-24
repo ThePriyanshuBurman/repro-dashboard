@@ -1,0 +1,131 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202) 880-4788"
+      },
+      {
+        "id": 2,
+        "name": "Abe Farsh",
+        "email": "afarsh@gmail.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(301) 793-1046"
+      },
+      {
+        "id": 3,
+        "name": "Abena Appiah Nuamah",
+        "email": "abena.realtor@gmail.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(240) 593-7504"
+      },
+      {
+        "id": 4,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 5,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 6,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 7,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 8,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 9,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 10,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "ABC",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 11,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 12,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 13,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      },
+      {
+        "id": 14,
+        "name": "Kristina Steward",
+        "email": "kristina@thewheregroup.com",
+        "shoots": "1",
+        "account_type":"Admin",
+        "company": "",
+        "phone": "(202)880-4788"
+      }
+    ]
+  }
+  
