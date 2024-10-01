@@ -53,7 +53,7 @@ $(function () {
 
   if (dt_category_list_table.length) {
     var dt_category = dt_category_list_table.DataTable({
-      ajax: assetsPath + 'json/accounts.json', // JSON file to add data
+      ajax: assetsPath + 'json/admin/accounts.json', // JSON file to add data
       columns: [
         // columns according to JSON
         { data: '' },

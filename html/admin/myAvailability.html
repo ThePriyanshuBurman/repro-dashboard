@@ -44,7 +44,10 @@
     <link rel="stylesheet" href="../../assets/vendor/libs/select2/select2.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/quill/editor.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/@form-validation/form-validation.css" />
-
+    <link rel="stylesheet" href="../../assets/vendor/libs/bootstrap-datepicker/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/jquery-timepicker/jquery-timepicker.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/pickr/pickr-themes.css" />
     <!-- Page CSS -->
 
     <link rel="stylesheet" href="../../assets/vendor/css/pages/app-calendar.css" />
@@ -214,7 +217,7 @@
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="outloook.html" class="menu-link">
+                                <a href="outlook.html" class="menu-link">
                                     <div data-i18n="Outlook">Outlook</div>
                                 </a>
                             </li>
@@ -723,7 +726,7 @@
                                             </div>
 
                                             <div id="default_availability_container">
-                                                <div class="calendar border rounded w-100" id="calendar_table_default">
+                                                <div class="calendar d-flex flex-row rounded w-100" id="calendar_table_default">
                                                     <!-- Sunday -->
                                                     <div
                                                         class="calendar-row d-flex flex-column day-row d-flex flex-column align-items-start border-bottom pt-half pb-half">
@@ -739,12 +742,12 @@
                                                                     <input type="text" data-day="default-0"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_from flatpickr-input"
-                                                                        value="9:00am" readonly="readonly">
+                                                                        value="9:00am" readonly="readonly" id="flatpickr-time">
                                                                     <div class="flex-shrink-1 px-1">-</div>
                                                                     <input type="text" data-day="default-0"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_to flatpickr-input"
-                                                                        value="11:59pm" readonly="readonly">
+                                                                        value="11:59pm" readonly="readonly" id="flatpickr-time">
                                                                     <a href="#" class="remove_range ms-1"
                                                                         data-day="default-0" data-range-id="0">
                                                                         <i
@@ -775,12 +778,12 @@
                                                                     <input type="text" data-day="default-1"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_from flatpickr-input"
-                                                                        value="9:00am" readonly="readonly">
+                                                                        value="9:00am" readonly="readonly" id="flatpickr-time" id="flatpickr-time">
                                                                     <div class="flex-shrink-1 px-1">-</div>
                                                                     <input type="text" data-day="default-1"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_to flatpickr-input"
-                                                                        value="11:59pm" readonly="readonly">
+                                                                        value="11:59pm" readonly="readonly" id="flatpickr-time">
                                                                     <a href="#" class="remove_range ms-1"
                                                                         data-day="default-1" data-range-id="0">
                                                                         <i
@@ -811,12 +814,12 @@
                                                                     <input type="text" data-day="default-2"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_from flatpickr-input"
-                                                                        value="9:00am" readonly="readonly">
+                                                                        value="9:00am" readonly="readonly" id="flatpickr-time">
                                                                     <div class="flex-shrink-1 px-1">-</div>
                                                                     <input type="text" data-day="default-2"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_to flatpickr-input"
-                                                                        value="11:59am" readonly="readonly">
+                                                                        value="11:59am" readonly="readonly" id="flatpickr-time">
                                                                     <a href="#" class="remove_range ms-1"
                                                                         data-day="default-2" data-range-id="0">
                                                                         <i
@@ -847,12 +850,12 @@
                                                                     <input type type="text" data-day="default-3"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_from flatpickr-input"
-                                                                        value="9:00am" readonly="readonly">
+                                                                        value="9:00am" readonly="readonly" id="flatpickr-time">
                                                                     <div class="flex-shrink-1 px-1">-</div>
                                                                     <input type="text" data-day="default-3"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_to flatpickr-input"
-                                                                        value="11:59pm" readonly="readonly">
+                                                                        value="11:59pm" readonly="readonly" id="flatpickr-time">
                                                                     <a href="#" class="remove_range ms-1"
                                                                         data-day="default-3" data-range-id="0">
                                                                         <i
@@ -883,12 +886,12 @@
                                                                     <input type="text" data-day="default-4"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_from flatpickr-input"
-                                                                        value="9:00am" readonly="readonly">
+                                                                        value="9:00am" readonly="readonly" id="flatpickr-time">
                                                                     <div class="flex-shrink-1 px-1">-</div>
                                                                     <input type="text" data-day="default-4"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_to flatpickr-input"
-                                                                        value="11:59pm" readonly="readonly">
+                                                                        value="11:59pm" readonly="readonly" id="flatpickr-time">
                                                                     <a href="#" class="remove_range ms-1"
                                                                         data-day="default-4" data-range-id="0">
                                                                         <i
@@ -919,12 +922,12 @@
                                                                     <input type="text" data-day="default-5"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_from flatpickr-input"
-                                                                        value="9:00am" readonly="readonly">
+                                                                        value="9:00am" readonly="readonly" id="flatpickr-time">
                                                                     <div class="flex-shrink-1 px-1">-</div>
                                                                     <input type="text" data-day="default-5"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_to flatpickr-input"
-                                                                        value="11:59pm" readonly="readonly">
+                                                                        value="11:59pm" readonly="readonly" id="flatpickr-time">
                                                                     <a href="#" class="remove_range ms-1"
                                                                         data-day="default-5" data-range-id="0">
                                                                         <i
@@ -955,12 +958,12 @@
                                                                     <input type="text" data-day="default-6"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_from flatpickr-input"
-                                                                        value="9:00am" readonly="readonly">
+                                                                        value="9:00am" readonly="readonly" id="flatpickr-time">
                                                                     <div class="flex-shrink-1 px-1">-</div>
                                                                     <input type="text" data-day="default-6"
                                                                         data-range-id="0"
                                                                         class="form-control form-control-sm text-center time_range_to flatpickr-input"
-                                                                        value="11:59pm" readonly="readonly">
+                                                                        value="11:59pm" readonly="readonly" id="flatpickr-time">
                                                                     <a href="#" class="remove_range ms-1"
                                                                         data-day="default-6" data-range-id="0">
                                                                         <i
@@ -2446,12 +2449,18 @@
     <script src="../../assets/vendor/libs/moment/moment.js"></script>
     <script src="../../assets/vendor/libs/flatpickr/flatpickr.js"></script>
 
+    <script src="../../assets/vendor/libs/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="../../assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.js"></script>
+    <script src="../../assets/vendor/libs/jquery-timepicker/jquery-timepicker.js"></script>
+    <script src="../../assets/vendor/libs/pickr/pickr.js"></script>
+
     <!-- Main JS -->
     <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
     <script src="../../assets/js/app-calendar-events.js"></script>
     <script src="../../assets/js/app-calendar.js"></script>
+    <script src="../../assets/js/forms-pickers.js"></script>
 </body>
 
 </html>

@@ -7,13 +7,13 @@
 (function () {
   // Flat Picker
   // --------------------------------------------------------------------
-  const flatpickrDate = document.querySelector('#flatpickr-date'),
-    flatpickrTime = document.querySelector('#flatpickr-time'),
-    flatpickrDateTime = document.querySelector('#flatpickr-datetime'),
-    flatpickrMulti = document.querySelector('#flatpickr-multi'),
-    flatpickrRange = document.querySelector('#flatpickr-range'),
-    flatpickrInline = document.querySelector('#flatpickr-inline'),
-    flatpickrFriendly = document.querySelector('#flatpickr-human-friendly'),
+  const flatpickrDate = document.querySelectorAll('#flatpickr-date'),
+    flatpickrTime = document.querySelectorAll('#flatpickr-time'),
+    flatpickrDateTime = document.querySelectorAll('#flatpickr-datetime'),
+    flatpickrMulti = document.querySelectorAll('#flatpickr-multi'),
+    flatpickrRange = document.querySelectorAll('#flatpickr-range'),
+    flatpickrInline = document.querySelectorAll('#flatpickr-inline'),
+    flatpickrFriendly = document.querySelectorAll('#flatpickr-human-friendly'),
     flatpickrDisabledRange = document.querySelector('#flatpickr-disabled-range');
 
   // Date
@@ -176,7 +176,7 @@ $(function () {
   // Bootstrap Daterange Picker
   // --------------------------------------------------------------------
   var bsRangePickerBasic = $('#bs-rangepicker-basic'),
-    bsRangePickerSingle = $('#bs-rangepicker-single'),
+    bsRangePickerSingle = document.querySelectorAll('#bs-rangepicker-single'),
     bsRangePickerTime = $('#bs-rangepicker-time'),
     bsRangePickerRange = $('#bs-rangepicker-range'),
     bsRangePickerWeekNum = $('#bs-rangepicker-week-num'),

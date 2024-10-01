@@ -70,11 +70,9 @@ $(function () {
 
     if (dt_category_list_table.length) {
         var dt_category = dt_category_list_table.DataTable({
-            ajax: assetsPath + 'json/history.json', // JSON file to add data
+            ajax: assetsPath + 'json/client/history.json', // JSON file to add data
             columns: [
                 // columns according to JSON
-                { data: '' }, // Placeholder for additional info
-                { data: 'id' }, // ID
                 { data: 'scheduled' }, // Scheduled Date
                 { data: 'completed' }, // Completed Date
                 { data: 'client' }, // Client Name (Abe Farsh)
@@ -92,41 +90,13 @@ $(function () {
                 { data: 'totalPaid' }, // Total Paid
                 { data: 'lastPaymentDate' }, // Last Payment Date
                 { data: 'lastPaymentType' }, // Last Payment Type
-                { data: 'totalPurchased' }, // Total Purchased
                 { data: 'shootNotes' }, // Shoot Notes
-                { data: 'photographerNotes' }, // Photographer Notes
-                { data: 'userAccountCreatedBy' } // Account Created By
             ],
             columnDefs: [
                 {
-                    // For Responsive
-                    className: 'control',
-                    searchable: false,
-                    orderable: false,
-                    responsivePriority: 1,
-                    targets: 0,
-                    render: function (data, type, full, meta) {
-                        return '';
-                    }
-                },
-                {
-                    // For Checkboxes
-                    targets: 1,
-                    orderable: false,
-                    searchable: false,
-                    responsivePriority: 4,
-                    checkboxes: true,
-                    render: function () {
-                        return '<input type="checkbox" class="dt-checkboxes form-check-input">';
-                    },
-                    checkboxes: {
-                        selectAllRender: '<input type="checkbox" class="form-check-input">'
-                    }
-                },
-                {
                     // scheduled
-                    targets: 2,
-                    responsivePriority: 2,
+                    targets: 0,
+                    responsivePriority: 0,
                     render: function (data, type, full, meta) {
                         var $scheduled = full['scheduled'];
                         return '<div class="text-sm-center">' + $scheduled + '</div>';
@@ -134,8 +104,8 @@ $(function () {
                 },
                 {
                     // completed
-                    targets: 3,
-                    responsivePriority: 3,
+                    targets: 1,
+                    responsivePriority: 1,
                     render: function (data, type, full, meta) {
                         var $completed = full['completed'];
                         return '<div class="text-sm-center">' + $completed + '</div>';
@@ -143,8 +113,8 @@ $(function () {
                 },
                 {
                     // client Name
-                    targets: 4,
-                    responsivePriority: 4,
+                    targets: 2,
+                    responsivePriority: 2,
                     render: function (data, type, full, meta) {
                         var $client = full['client'];
                         return "<div class='text-sm-center text-nowrap'>" + $client + '</div>';
@@ -152,8 +122,8 @@ $(function () {
                 },
                 {
                     // client email
-                    targets: 5,
-                    responsivePriority: 5,
+                    targets: 3,
+                    responsivePriority: 3,
                     render: function (data, type, full, meta) {
                         var $clientEmail = full['clientEmail'];
                         return '<div class="text-sm-center">' + $clientEmail + '</div>';
@@ -161,7 +131,7 @@ $(function () {
                 },
                 {
                     // phone number
-                    targets: 6,
+                    targets: 4,
                     orderable: false,
                     render: function (data, type, full, meta) {
                         var $phone = full['phone'];
@@ -170,8 +140,8 @@ $(function () {
                 },
                 {
                     // company
-                    targets: 7,
-                    responsivePriority: 7,
+                    targets: 5,
+                    responsivePriority: 5,
                     render: function (data, type, full, meta) {
                         var $company = full['company'];
                         return "<div class='text-sm-center text-nowrap'>" + $company + '</div>';
@@ -179,8 +149,8 @@ $(function () {
                 },
                 {
                     // total Shoots
-                    targets: 8,
-                    responsivePriority: 8,
+                    targets: 6,
+                    responsivePriority: 6,
                     render: function (data, type, full, meta) {
                         var $totalShoots = full['totalShoots'];
                         return "<div class='text-sm-center'>" + $totalShoots + '</div>';
@@ -188,8 +158,8 @@ $(function () {
                 },
                 {
                     // Full Address
-                    targets: 9,
-                    responsivePriority: 9,
+                    targets: 7,
+                    responsivePriority: 7,
                     render: function (data, type, full, meta) {
                         var $fullAddress = full['fullAddress'];
                         return "<div class='text-sm-start text-nowrap'>" + $fullAddress + '</div>';
@@ -197,8 +167,8 @@ $(function () {
                 },
                 {
                     // Photographer Name
-                    targets: 10,
-                    responsivePriority: 10,
+                    targets: 8,
+                    responsivePriority: 8,
                     render: function (data, type, full, meta) {
                         var $photographer = full['photographer'];
                         return '<div class="text-sm-center">' + $photographer + '</div>';
@@ -206,8 +176,8 @@ $(function () {
                 },
                 {
                     // services
-                    targets: 11,
-                    responsivePriority: 11,
+                    targets: 9,
+                    responsivePriority: 9,
                     render: function (data, type, full, meta) {
                         var $services = full['services'];
                         return '<div class="text-sm-start text-wrap">' + $services + '</div>';
@@ -215,127 +185,74 @@ $(function () {
                 },
                 {
                     // client email
-                    targets: 12,
-                    responsivePriority: 12,
+                    targets: 10,
+                    responsivePriority: 10,
                     render: function (data, type, full, meta) {
                         var $baseQuote = full['baseQuote'];
                         return '<div class="text-sm-center">' + $baseQuote + '</div>';
                     }
                 },
                 {
-                    // client email
-                    targets: 13,
-                    responsivePriority: 13,
+                    // TAX %
+                    targets: 11,
+                    responsivePriority: 11,
                     render: function (data, type, full, meta) {
                         var $taxPercent = full['taxPercent'];
                         return '<div class="text-sm-center">' + $taxPercent + '</div>';
                     }
                 },
                 {
-                    // client email
-                    targets: 14,
-                    responsivePriority: 14,
+                    // TAX AMOUNT
+                    targets: 12,
+                    responsivePriority: 12,
                     render: function (data, type, full, meta) {
                         var $taxAmount = full['taxAmount'];
                         return '<div class="text-sm-center">' + $taxAmount + '</div>';
                     }
                 },
                 {
-                    // client email
-                    targets: 15,
-                    responsivePriority: 15,
+                    // TOTAL QUOTE
+                    targets: 13,
+                    responsivePriority: 13,
                     render: function (data, type, full, meta) {
                         var $totalQuote = full['totalQuote'];
                         return '<div class="text-sm-center">' + $totalQuote + '</div>';
                     }
                 },
                 {
-                    // client email
-                    targets: 16,
-                    responsivePriority: 16,
+                    // TOTAL PAID
+                    targets: 14,
+                    responsivePriority: 14,
                     render: function (data, type, full, meta) {
                         var $totalPaid = full['totalPaid'];
                         return '<div class="text-sm-center">' + $totalPaid + '</div>';
                     }
                 },
                 {
-                    // client email
-                    targets: 17,
-                    responsivePriority: 17,
+                    // LAST PAYMENT DATE
+                    targets: 15,
+                    responsivePriority: 15,
                     render: function (data, type, full, meta) {
                         var $lastPaymentDate = full['lastPaymentDate'];
                         return '<div class="text-sm-center">' + $lastPaymentDate + '</div>';
                     }
                 },
                 {
-                    // client email
-                    targets: 18,
-                    responsivePriority: 18,
+                    // LAST PAYMENT TYPE
+                    targets: 16,
+                    responsivePriority: 16,
                     render: function (data, type, full, meta) {
                         var $lastPaymentType = full['lastPaymentType'];
                         return '<div class="text-sm-center">' + $lastPaymentType + '</div>';
                     }
                 },
                 {
-                    // client email
-                    targets: 19,
-                    responsivePriority: 19,
-                    render: function (data, type, full, meta) {
-                        var $totalPurchased = full['totalPurchased'];
-                        return '<div class="text-sm-center">' + $totalPurchased + '</div>';
-                    }
-                },
-                {
-                    // client email
-                    targets: 20,
-                    responsivePriority: 20,
+                    // SHOOT NOTES
+                    targets: 17,
+                    responsivePriority: 17,
                     render: function (data, type, full, meta) {
                         var $shootNotes = full['shootNotes'];
                         return '<div class="text-sm-center">' + $shootNotes + '</div>';
-                    }
-                },
-                {
-                    // client email
-                    targets: 21,
-                    responsivePriority: 21,
-                    render: function (data, type, full, meta) {
-                        var $photographerNotes = full['photographerNotes'];
-                        return '<div class="text-sm-center">' + $photographerNotes + '</div>';
-                    }
-                },
-                {
-                    // client email
-                    targets: 22,
-                    responsivePriority: 22,
-                    render: function (data, type, full, meta) {
-                        var $userAccountCreatedBy = full['userAccountCreatedBy'];
-                        return '<div class="text-sm-center">' + $userAccountCreatedBy + '</div>';
-                    }
-                },
-                {
-                    // client email
-                    targets: 16,
-                    responsivePriority: 16,
-                    render: function (data, type, full, meta) {
-                        var $totalPaid = full['totalPaid'];
-                        return '<div class="text-sm-center">' + $totalPaid + '</div>';
-                    }
-                },
-                {
-                    // client email
-                    targets: 16,
-                    responsivePriority: 16,
-                    render: function (data, type, full, meta) {
-                        var $totalPaid = full['totalPaid'];
-                        return '<div class="text-sm-center">' + $totalPaid + '</div>';
-                    }
-                }, {
-                    // client email
-                    targets: 16,
-                    responsivePriority: 16,
-                    render: function (data, type, full, meta) {
-                        var $totalPaid = full['totalPaid'];
-                        return '<div class="text-sm-center">' + $totalPaid + '</div>';
                     }
                 },
             ],

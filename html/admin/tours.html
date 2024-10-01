@@ -14,7 +14,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Tours - R/E Pro Photos</title>
+    <title>Outlook Email Accounts - R/E Pro Photos</title>
 
     <meta name="description" content="" />
 
@@ -39,10 +39,19 @@
 
     <link rel="stylesheet" href="../../assets/css/demo.css" />
 
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
 
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/select2/select2.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/@form-validation/form-validation.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/quill/typography.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/quill/katex.css" />
+  <link rel="stylesheet" href="../../assets/vendor/libs/quill/editor.css" />
 
     <!-- Page CSS -->
 
@@ -210,7 +219,7 @@
                     </a>
                   </li>
                   <li class="menu-item">
-                    <a href="outloook.html" class="menu-link">
+                    <a href="outlook.html" class="menu-link">
                       <div data-i18n="Outlook">Outlook</div>
                     </a>
                   </li>
@@ -263,7 +272,7 @@
           <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
             <div class="navbar-nav align-items-center justify-content-center flex-grow-1">
-              <h4 class="m-0 p-0">Tours</h4>
+              <h4 class="m-0 p-0">Outlook Email Accounts</h4>
             </div>
 
             <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -607,403 +616,30 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-                <div class="company-information">
-                    <div class="alert alert-primary text-center" role="alert">Virtual Tour links are single-page websites that display uploaded media for a given shoot.<br>
-                        Photos can be viewed in full-screen, high quality, and video and other content can be embedded for viewing.
+                <div class="tour-branding-information">
+                  <div class="alert alert-primary text-center" role="alert">View Outlook Email Clients</div>
+                  <!-- Category List Table -->
+                  <div class="card">
+                    <div class="card-datatable table-responsive">
+                      <table class="datatables-category-list table border-top">
+                        <thead>
+                          <tr class="text-capitalize">
+                            <th></th>
+                            <th></th>
+                            <th>Email</th>
+                            <th class="text-nowrap text-sm-start">Flagged</th>
+                            <th class="text-nowrap text-sm-start">First Name</th>
+                            <th class="text-nowrap text-sm-start">Last Name</th>
+                            <th class="text-nowrap text-sm-start">Phone</th>
+                            <th class="text-nowrap text-sm-start">Company</th>
+                            <th class="text-lg-center">Is outlook</th>
+                          </tr>
+                        </thead>
+                      </table>
                     </div>
-
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-12 col-lg-6">
-                                    <form id="tours_custom_tour_url_form" novalidate="novalidate">
-                                        <div class="row">
-                                            <div class="d-flex flex-column flex-md-row">
-                                                <div class="text-nowrap me-0 me-md-3">
-                                                    <label class="col-form-label" for="tours_custom_tour_url">
-                                                        Custom Tour URL (Branded)
-                                                    </label>
-                                                    <a class="text-primary" 
-                                                       data-bs-toggle="popover" 
-                                                       data-bs-trigger="click" 
-                                                       data-bs-placement="bottom" 
-                                                       data-bs-html="true" 
-                                                       data-bs-content="Enter the URL you would like to use for the Branded Tour Links. (ex: http://tour.mycompany.com or http://www.mycompanytour.com)
-                                                            <div class='pt-1'>
-                                                                <i>This setting is for Branded Tour Links only and does not change the URL that you and your clients visit to login to ViewShoot (https://pro.reprophotos.com).</i>
-                                                            </div>
-                                                            <div class='pt-1 text-center small'>
-                                                                <div class='alert alert-danger p-1'>
-                                                                    <i>NOTE: If you are adding a Custom Tour URL for the first time, you must make sure your URL points to the ViewShoot servers. 
-                                                                    Visit the <a href='https://www.viewshoot.com/support/article/custom-tour-url-setup/' target='_blank'>Knowledge Base (Admin->Knowledge Base)</a> for additional help.</i>
-                                                                </div>
-                                                            </div>"
-                                                       aria-label="Custom Tour URL" 
-                                                       data-bs-original-title="Custom Tour URL">
-                                                        <i class="ti ti-help-circle text-primary"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group input-group-merge">
-                                                    <span class="input-group-text text-primary" id="tours_custom_tour_url_group">http://</span>
-                                                    <input type="text" 
-                                                           inputmode="url" 
-                                                           id="tours_custom_tour_url" 
-                                                           name="tours_custom_tour_url" 
-                                                           class="form-control personal_info" 
-                                                           placeholder="tour.mycompany.com" 
-                                                           value="" 
-                                                           data-msg="Please enter a valid URL">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                    
-                                <div class="col-12 col-lg-6">
-                                    <form id="tours_custom_tour_url_mls_form" novalidate="novalidate">
-                                        <div class="row">
-                                            <div class="d-flex flex-column flex-md-row">
-                                                <div class="text-nowrap me-0 me-md-3">
-                                                    <label class="col-form-label" for="tours_custom_tour_url_mls">
-                                                        Custom Tour URL (MLS)
-                                                    </label>
-                                                    <a class="text-primary" 
-                                                       data-bs-toggle="popover" 
-                                                       data-bs-trigger="click" 
-                                                       data-bs-placement="bottom" 
-                                                       data-bs-html="true" 
-                                                       data-bs-content="Enter the URL you would like to use for the MLS Tour Links. (ex: http://tourmls.mycompany.com or http://www.mycompanymlstour.com)
-                                                            <div class='pt-1'>
-                                                                <i>This setting is for MLS Tour Links only and does not change the URL that you and your clients visit to login to ViewShoot (https://pro.reprophotos.com).</i>
-                                                            </div>
-                                                            <div class='pt-1 text-center small'>
-                                                                <div class='alert alert-danger p-1'>
-                                                                    <i>NOTE: If you are adding a Custom Tour URL for the first time, you must make sure your URL points to the ViewShoot servers. 
-                                                                    Visit the <a href='https://www.viewshoot.com/support/article/custom-tour-url-setup/' target='_blank'>Knowledge Base (Admin->Knowledge Base)</a> for additional help.</i>
-                                                                </div>
-                                                            </div>"
-                                                       aria-label="Custom Tour URL" 
-                                                       data-bs-original-title="Custom Tour URL">
-                                                        <i class="ti ti-help-circle text-primary"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group input-group-merge">
-                                                    <span class="input-group-text text-primary" id="tours_custom_tour_url_mls_group">http://</span>
-                                                    <input type="text" 
-                                                           inputmode="url" 
-                                                           id="tours_custom_tour_url_mls" 
-                                                           name="tours_custom_tour_url_mls" 
-                                                           class="form-control personal_info" 
-                                                           placeholder="mlstour.mycompany.com" 
-                                                           value="" 
-                                                           data-msg="Please enter a valid URL">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="row mt-4">
-                        <div class="col-xl mb-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <form>
-
-                                        <!-- Tour Links -->
-                                        <div class="row mb-1">
-                                            <div class="col-8">
-                                                <label class="col-form-label"
-                                                    for="tours_link_onoff">
-                                                    Tour Links
-                                                </label>
-                                                <a class="text-primary" data-bs-toggle="popover"
-                                                    data-bs-trigger="click" data-bs-placement="bottom"
-                                                    data-bs-html="true"
-                                                    data-bs-content="By default should tour links for each shoot be on or off?<div class='pt-1'>Adjustable on per-shoot basis</div><div class='pt-1 text-center small text-muted'><i>Reminders are sent according to the Reminder Frequency selected.</i></div>"
-                                                    aria-label="Tour Links"
-                                                    title="Tour Links On/Off">
-                                                    <i
-                                                        class="ti ti-help-circle text-primary"></i>
-                                                </a>
-                                            </div>
-                                            <div class="col-4 d-flex justify-content-end">
-                                                <div
-                                                    class="form-check form-switch form-switch-lg form-check-primary m-0">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="tours_link_onoff"
-                                                        name="tours_link_onoff" checked>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Template -->
-                                        <div class="row mb-1">
-                                            <div class="col-12 col-sm-6">
-                                                <label class="col-form-label"
-                                                    for="tours_template">
-                                                    Template
-                                                </label>
-                                                <a class="text-primary" data-bs-toggle="popover"
-                                                    data-bs-trigger="click" data-bs-placement="bottom"
-                                                    data-bs-html="true"
-                                                    data-bs-content="Choose which design/template will be used for each shoot.<div class='pt-1 text-center small text-muted'><i>Adjustable on per-shoot basis</i></div>"
-                                                    aria-label="Tour Template">
-                                                    <i
-                                                        class="ti ti-help-circle text-primary"></i>
-                                                </a>
-                                            </div>
-                                            <div class="col-12 col-sm-6" data-select2-id="84">
-                                                <select class="select2 form-select settings-shoots"
-                                                    name="tours_template"
-                                                    id="tours_template"
-                                                    data-minimum-results-for-search="Infinity">
-                                                    <option value="Classic" >Classic</option>
-                                                    <option value="Refreshed" selected>Refreshed</option>
-                                                    <option value="Propper">Propper</option>
-                                                    <option value="Ortiz">Ortiz</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <!-- Featured Embed -->
-                                        <div class="row mb-1">
-                                            <div class="col-8">
-                                                <label class="col-form-label"
-                                                    for="tours_featured_embed_onoff">
-                                                    Featured Embed
-                                                </label>
-                                                <a class="text-primary" data-bs-toggle="popover"
-                                                    data-bs-trigger="click" data-bs-placement="bottom"
-                                                    data-bs-html="true"
-                                                    data-bs-content="If one or more media embeds exist for a shoot, should the first one be featured within the template?<div class='pt-1 text-center small text-muted'><i>Adjustable on per-shoot basis</i></div>"
-                                                    aria-label="Featured Embed">
-                                                    <i
-                                                        class="ti ti-help-circle text-primary"></i>
-                                                </a>
-                                            </div>
-                                            <div class="col-4 d-flex justify-content-end">
-                                                <div
-                                                    class="form-check form-switch form-switch-lg form-check-primary m-0">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="tours_featured_embed_onoff"
-                                                        name="tours_featured_embed_onoff" checked>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Transitions -->
-                                        <div class="row mb-1">
-                                            <div class="col-12 col-sm-6">
-                                                <label class="col-form-label"
-                                                    for="tours_transition">
-                                                    Transitions
-                                                </label>
-                                                <a class="text-primary" data-bs-toggle="popover"
-                                                    data-bs-trigger="click" data-bs-placement="bottom"
-                                                    data-bs-html="true"
-                                                    data-bs-content="Select what transition should be used when switching between photos in full-screen mode."
-                                                    aria-label="Transitions"
-                                                    title="Tour Image Transitions">
-                                                    <i
-                                                        class="ti ti-help-circle text-primary"></i>
-                                                </a>
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <select class="select2 form-select settings-shoots"
-                                                    id="tours_transition"
-                                                    name="tours_transition">
-                                                    <option value="3" selected>Slide</option>
-                                                    <option value="1">Fade</option>
-                                                    <option value="2">Ken Burns</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <!-- Auto Play -->
-                                        <div class="row mb-1">
-                                            <div class="col-8">
-                                                <label class="col-form-label"
-                                                    for="tour_auto_play_onoff">
-                                                    Auto Play
-                                                </label>
-                                                <a class="text-primary" data-bs-toggle="popover"
-                                                    data-bs-trigger="click" data-bs-placement="bottom"
-                                                    data-bs-html="true"
-                                                    data-bs-content="When a tour photo is clicked to go in full-screen mode, the photo gallery will cycle through photos automatically without the Play button requiring activation.<div class='pt-1 text-center small text-muted'><i>Adjustable on per-shoot basis</i></div>"
-                                                    aria-label="Auto Play"
-                                                    title="Auto Play">
-                                                    <i
-                                                        class="ti ti-help-circle text-primary"></i>
-                                                </a>
-                                            </div>
-                                            <div class="col-4 d-flex justify-content-end">
-                                                <div
-                                                    class="form-check form-switch form-switch-lg form-check-primary m-0">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="tour_auto_play_onoff"
-                                                        name="tour_auto_play_onoff" checked>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Full OnLoad -->
-                                        <div class="row mb-1">
-                                            <div class="col-8">
-                                                <label class="col-form-label"
-                                                    for="tours_full_onLoad_onoff">
-                                                    Full OnLoad
-                                                </label>
-                                                <a class="text-primary" data-bs-toggle="popover"
-                                                    data-bs-trigger="click" data-bs-placement="bottom"
-                                                    data-bs-html="true"
-                                                    data-bs-content="After a tour page is loaded the first photo will automatically pop-up in fullscreen, without requiring the user to click on a photo.<div class='pt-1 text-center small text-muted'><i>Adjustable on per-shoot basis</i></div>"
-                                                    aria-label="Full OnLoad"
-                                                    title="Full OnLoad">
-                                                    <i
-                                                        class="ti ti-help-circle text-primary"></i>
-                                                </a>
-                                            </div>
-                                            <div class="col-4 d-flex justify-content-end">
-                                                <div
-                                                    class="form-check form-switch form-switch-lg form-check-primary m-0">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="tours_full_onLoad_onoff"
-                                                        name="tours_full_onLoad_onoff">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Social Sharing Buttons -->
-                                        <div class="row mb-1">
-                                            <div class="col-8">
-                                                <label class="col-form-label"
-                                                    for="shoots_txt_reminders_onoff">
-                                                    Social Sharing Buttons
-                                                </label>
-                                                <a class="text-primary" data-bs-toggle="popover"
-                                                    data-bs-trigger="click" data-bs-placement="bottom"
-                                                    data-bs-html="true"
-                                                    data-bs-content="Show social sharing buttons on the tour link page.<div class='pt-1 text-center small text-muted'><i>Only available on the Branded Tour Link</i></div>"
-                                                    aria-label="Social Sharing Buttons"
-                                                    title="Social Sharing Buttons">
-                                                    <i
-                                                        class="ti ti-help-circle text-primary"></i>
-                                                </a>
-                                            </div>
-                                            <div class="col-4 d-flex justify-content-end">
-                                                <div
-                                                    class="form-check form-switch form-switch-lg form-check-primary m-0">
-                                                    <input class="form-check-input" type="checkbox"
-                                                        id="shoots_txt_reminders_onoff"
-                                                        name="shoots_txt_reminders_onoff" checked>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-6">
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body">
-
-                                            <!-- Show Google Map -->
-                                            <div class="row mb-12">
-                                                <div class="col-8">
-                                                    <label class="col-form-label"
-                                                        for="tours_google_map_onoff">
-                                                        Show Google Map
-                                                    </label>
-                                                    <a class="text-primary" data-bs-toggle="popover"
-                                                        data-bs-trigger="click" data-bs-placement="bottom"
-                                                        data-bs-html="true"
-                                                        data-bs-content="For MLS-Compliant tour links, show the Google Map. Some MLS organizations don't allow the Google Map to be displayed so you may remove it here."
-                                                        aria-label="Show Google Map"
-                                                        title="Show Google Map">
-                                                        <i
-                                                            class="ti ti-help-circle text-primary"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <div
-                                                        class="form-check form-switch form-switch-lg form-check-primary m-0">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            id="tours_google_map_onoff"
-                                                            name="tours_google_map_onoff" checked>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Strip MLS http:// -->
-                                            <div class="row mb-12 mt-12">
-                                                <div class="col-8">
-                                                    <label class="col-form-label"
-                                                        for="tours_strip_onoff">
-                                                        Strip MLS http://
-                                                    </label>
-                                                    <a class="text-primary" data-bs-toggle="popover"
-                                                        data-bs-trigger="click" data-bs-placement="bottom"
-                                                        data-bs-html="true"
-                                                        data-bs-content="Some MLS systems claim the MLS tour link is invalid if http:// is utilized at the front of the URL. Check this box to have the http:// stripped from the Summary email, so when agents highlight the link out of the email they don't get the http:// portion."
-                                                        aria-label="Strip MLS http://"
-                                                        title="Strip MLS http://">
-                                                        <i
-                                                            class="ti ti-help-circle text-primary"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <div
-                                                        class="form-check form-switch form-switch-lg form-check-primary m-0">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            id="tours_strip_onoff"
-                                                            name="tours_strip_onoff" unchecked>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Use Secure URL -->
-                                            <div class="row mb-12 mt-12">
-                                                <div class="col-8">
-                                                    <label class="col-form-label"
-                                                        for="tours_secure_URL_onoff">
-                                                        Use Secure URL
-                                                    </label>
-                                                    <a class="text-primary" data-bs-toggle="popover"
-                                                        data-bs-trigger="click" data-bs-placement="bottom"
-                                                        data-bs-html="true"
-                                                        data-bs-content="Use a Secure URL Protocol (https://) for Tour Links. Make sure to verify your local MLS allows https:// for their Tour Links before enabling this."
-                                                        aria-label="Use Secure URL">
-                                                        <i
-                                                            class="ti ti-help-circle text-primary"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="col-4 d-flex justify-content-end">
-                                                    <div
-                                                        class="form-check form-switch form-switch-lg form-check-primary m-0">
-                                                        <input class="form-check-input" type="checkbox"
-                                                            id="tours_secure_URL_onoff"
-                                                            name="tours_secure_URL_onoff" checked>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
             <!-- / Content -->
 
             <!-- Footer -->
@@ -1044,51 +680,63 @@
     </div>
     <!-- / Layout wrapper -->
 
-    <!-- jQuery and Bootstrap JS for modal functionality -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-labelledby="popupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popupModalLabel">Delete Information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          You want to delete this entry??
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Disagree</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Agree</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script>
-        // Initialize Bootstrap Popover
-        document.addEventListener('DOMContentLoaded', function () {
-            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-                return new bootstrap.Popover(popoverTriggerEl)
-            })
-        });
-    </script>
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
+  <!-- jQuery and Bootstrap JS for modal functionality -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../../assets/vendor/js/bootstrap.js"></script>
-    <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
-    <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-    <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
-    <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
-    <script src="../../assets/vendor/js/menu.js"></script>
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
 
-    <!-- endbuild -->
+  <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../../assets/vendor/js/bootstrap.js"></script>
+  <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
+  <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+  <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  <script src="../../assets/vendor/js/menu.js"></script>
 
-    <!-- Vendors JS -->
-    <script src="../../assets/vendor/libs/moment/moment.js"></script>
-    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-    <script src="../../assets/vendor/libs/select2/select2.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/popular.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/bootstrap5.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/auto-focus.js"></script>
-    <script src="../../assets/vendor/libs/quill/katex.js"></script>
-    <script src="../../assets/vendor/libs/quill/quill.js"></script>
+  <!-- endbuild -->
 
-    <!-- Main JS -->
-    <script src="../../assets/js/main.js"></script>
+  <!-- Vendors JS -->
+  <script src="../../assets/vendor/libs/moment/moment.js"></script>
+  <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+  <script src="../../assets/vendor/libs/select2/select2.js"></script>
+  <script src="../../assets/vendor/libs/@form-validation/popular.js"></script>
+  <script src="../../assets/vendor/libs/@form-validation/bootstrap5.js"></script>
+  <script src="../../assets/vendor/libs/@form-validation/auto-focus.js"></script>
+  <script src="../../assets/vendor/libs/quill/katex.js"></script>
+  <script src="../../assets/vendor/libs/quill/quill.js"></script>
 
-    <!-- Page JS -->
+  <!-- Main JS -->
+  <script src="../../assets/js/main.js"></script>
+
+  <!-- Page JS -->
+  <script src="../../assets/js/tour-branding-info.js"></script>
+
+
   </body>
 </html>
