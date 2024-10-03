@@ -62,46 +62,45 @@ $(function () {
     if (dt_category_list_table.length) {
         var dt_category = dt_category_list_table.DataTable({
             ajax: assetsPath + 'json/admin/outlook.json', // JSON file to add data
-            columns: [
-                { data: '' },
-                { data: 'id' },         // ID
+            columns: [       // ID
                 { data: 'email' },      // Email
                 { data: 'flagged' },    // Flagged Status
                 { data: 'firstName' },  // First Name
                 { data: 'lastName' },   // Last Name
                 { data: 'phone' },      // Phone
-                { data: 'company' }     // Company
+                { data: 'company' },
+                { data: 'outlook'},     // Company
             ],
             columnDefs: [
-                {
+                //{
                     // For Responsive
-                    className: 'control',
-                    searchable: false,
-                    orderable: false,
-                    responsivePriority: 1,
-                    targets: 0,
-                    render: function (data, type, full, meta) {
-                        return '';
-                    }
-                },
-                {
+                //     className: 'control',
+                //     searchable: false,
+                //     orderable: false,
+                //     responsivePriority: 1,
+                //     targets: 0,
+                //     render: function (data, type, full, meta) {
+                //         return '';
+                //     }
+                // },
+                // {
                     // For Checkboxes
-                    targets: 1,
-                    orderable: false,
-                    searchable: false,
-                    responsivePriority: 4,
-                    checkboxes: true,
-                    render: function () {
-                        return '<input type="checkbox" class="dt-checkboxes form-check-input">';
-                    },
-                    checkboxes: {
-                        selectAllRender: '<input type="checkbox" class="form-check-input">'
-                    }
-                },
+                //     targets: 1,
+                //     orderable: false,
+                //     searchable: false,
+                //     responsivePriority: 4,
+                //     checkboxes: true,
+                //     render: function () {
+                //         return '<input type="checkbox" class="dt-checkboxes form-check-input">';
+                //     },
+                //     checkboxes: {
+                //         selectAllRender: '<input type="checkbox" class="form-check-input">'
+                //     }
+                // },
                 {
                     // Email
-                    targets: 2,
-                    responsivePriority: 2,
+                    targets: 0,
+                    responsivePriority: 0,
                     render: function (data, type, full, meta) {
                         var $email = full['email'];
                         return '<div class="text-sm-start text-nowrap">' + $email + '</div>';
@@ -109,8 +108,8 @@ $(function () {
                 },
                 {
                     // Flagged
-                    targets: 3,
-                    responsivePriority: 3,
+                    targets: 1,
+                    responsivePriority: 1,
                     render: function (data, type, full, meta) {
                         var $flagged = full['flagged'];
                         return '<div class="text-sm-start">' + $flagged + '</div>';
@@ -118,8 +117,8 @@ $(function () {
                 },
                 {
                     // First Name
-                    targets: 4,
-                    responsivePriority: 4,
+                    targets: 2,
+                    responsivePriority: 2,
                     render: function (data, type, full, meta) {
                         var $firstName = full['firstName'];
                         return '<div class="text-sm-start">' + $firstName + '</div>';
@@ -127,8 +126,8 @@ $(function () {
                 },
                 {
                     // Last Name
-                    targets: 5,
-                    responsivePriority: 5,
+                    targets: 3,
+                    responsivePriority: 3,
                     render: function (data, type, full, meta) {
                         var $lastName = full['lastName'];
                         return '<div class="text-sm-start">' + $lastName + '</div>';
@@ -136,8 +135,8 @@ $(function () {
                 },
                 {
                     // Phone
-                    targets: 6,
-                    responsivePriority: 6,
+                    targets: 4,
+                    responsivePriority: 4,
                     render: function (data, type, full, meta) {
                         var $phone = full['phone'];
                         return '<div class="text-sm-start text-nowrap">' + $phone + '</div>';
@@ -145,8 +144,8 @@ $(function () {
                 },
                 {
                     // Company
-                    targets: 7,
-                    responsivePriority: 7,
+                    targets: 5,
+                    responsivePriority: 5,
                     render: function (data, type, full, meta) {
                         var $company = full['company'];
                         return '<div class="text-sm-start text-nowrap text-capitalize">' + $company + '</div>';

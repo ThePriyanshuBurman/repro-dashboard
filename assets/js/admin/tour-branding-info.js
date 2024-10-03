@@ -56,43 +56,41 @@ $(function () {
       ajax: assetsPath + 'json/admin/tour-branding-info.json', // JSON file to add data
       columns: [
         // columns according to JSON
-        { data: '' },
-        { data: 'id' },
         { data: 'name' },
         { data: 'company' },
         { data: 'phone' },
         { data: '' }
       ],
       columnDefs: [
-        {
+        //{
           // For Responsive
-          className: 'control',
-          searchable: false,
-          orderable: false,
-          responsivePriority: 1,
-          targets: 0,
-          render: function (data, type, full, meta) {
-            return '';
-          }
-        },
-        {
+          // className: 'control',
+          // searchable: false,
+          // orderable: false,
+          // responsivePriority: 1,
+          // targets: 0,
+          // render: function (data, type, full, meta) {
+          //   return '';
+          // }
+        //},
+        //{
           // For Checkboxes
-          targets: 1,
-          orderable: false,
-          searchable: false,
-          responsivePriority: 4,
-          checkboxes: true,
-          render: function () {
-            return '<input type="checkbox" class="dt-checkboxes form-check-input">';
-          },
-          checkboxes: {
-            selectAllRender: '<input type="checkbox" class="form-check-input">'
-          }
-        },
+        //   targets: 1,
+        //   orderable: false,
+        //   searchable: false,
+        //   responsivePriority: 4,
+        //   checkboxes: true,
+        //   render: function () {
+        //     return '<input type="checkbox" class="dt-checkboxes form-check-input">';
+        //   },
+        //   checkboxes: {
+        //     selectAllRender: '<input type="checkbox" class="form-check-input">'
+        //   }
+        // },
         {
           // Categories and Category Detail
-          targets: 2,
-          responsivePriority: 2,
+          targets: 0,
+          responsivePriority: 0,
           render: function (data, type, full, meta) {
             var $name = full['name'],
               $email = full['email'],
@@ -115,8 +113,8 @@ $(function () {
         },
         {
           // company name
-          targets: 3,
-          responsivePriority: 3,
+          targets: 1,
+          responsivePriority: 1,
           render: function (data, type, full, meta) {
             var $company = full['company'];
             return '<div class="text-sm-end">' + $company + '</div>';
@@ -124,7 +122,7 @@ $(function () {
         },
         {
           // phone number
-          targets: 4,
+          targets: 2,
           orderable: false,
           render: function (data, type, full, meta) {
             var $phone = full['phone'];

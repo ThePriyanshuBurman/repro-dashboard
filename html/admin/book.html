@@ -226,11 +226,7 @@
                                     <div data-i18n="Discounts">Discounts</div>
                                 </a>
                             </li>
-                            <li class="menu-item">
-                                <a href="apps-referral.html" class="menu-link">
-                                    <div data-i18n="Refferals">Refferals</div>
-                                </a>
-                            </li>
+
                         </ul>
                     </li>
                     <li class="menu-item">
@@ -273,40 +269,7 @@
                         </div>
 
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
-                            <!-- Language -->
-                            <li class="nav-item dropdown-language dropdown">
-                                <a class="nav-link btn btn-text-secondary btn-icon rounded-pill dropdown-toggle hide-arrow"
-                                    href="javascript:void(0);" data-bs-toggle="dropdown">
-                                    <i class="ti ti-language rounded-circle ti-md"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0);" data-language="en"
-                                            data-text-direction="ltr">
-                                            <span>English</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0);" data-language="fr"
-                                            data-text-direction="ltr">
-                                            <span>French</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0);" data-language="ar"
-                                            data-text-direction="rtl">
-                                            <span>Arabic</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0);" data-language="de"
-                                            data-text-direction="ltr">
-                                            <span>German</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!--/ Language -->
+
 
                             <!-- Style Switcher -->
                             <li class="nav-item dropdown-style-switcher dropdown">
@@ -7384,8 +7347,11 @@
                                         <div class="d-md-flex justify-content-center">
                                             <div style="max-width: 900px;">
                                                 <div class="mt-2 text-center fst-italic text-muted">
-                                                    <a href="#" id="adjust_shoot_duration" data-shoot-duration="0"
-                                                        data-shoot-duration-override="0">Duration: 0 <span
+                                                    <a href="#" id="adjust_shoot_duration" 
+                                                        data-shoot-duration="0"
+                                                        data-shoot-duration-override="0"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#adjust-duration">Duration: 0 <span
                                                             class="small">(mins)</span></a>
                                                 </div>
                                                 <div class="p-3" id="invoice_total" style="max-width: 500px;">
@@ -7394,20 +7360,32 @@
                                                         <div class="row row-cols-2 text-end">
 
                                                             <div class="col mb-2"></div>
-                                                            <div class="col mb-2" id="review-coupon"><a href="#"
-                                                                    class="enter-coupon-code">Have a Coupon?</a>
+                                                            <!-- Coupon Link -->
+                                                            <div class="col mb-2" id="review-coupon">
+                                                                <a href="#" class="enter-coupon-code"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#modals-transparent">
+                                                                    Have a Coupon?
+                                                                </a>
                                                             </div>
-                                                            <div class="col text-nowrap">Subtotal</div>
-                                                            <div class="col" id="review-subtotal"><a href="#"
-                                                                    data-bs-toggle="tooltip"
-                                                                    data-bs-original-title="Adjust Quote"
-                                                                    data-shoot-quote="0.00" data-shoot-manual-quote=""
-                                                                    class="adjust_shoot_quote">$0.00</a> </div>
 
+                                                            <!-- Subtotal Section -->
+                                                            <div class="col text-nowrap">Subtotal</div>
+                                                            <div class="col" id="review-subtotal">
+                                                                <a href="#" class="adjust_shoot_quote"
+                                                                    data-bs-original-title="Adjust Quote"
+                                                                    data-shoot-quote="0.00" data-bs-toggle="modal"
+                                                                    data-bs-target="#adjust-quote">
+                                                                    $0.00
+                                                                </a>
+                                                            </div>
+
+                                                            <!-- Tax Section -->
                                                             <div class="col text-nowrap" id="review-tax-label">
-                                                                <a href="#" data-bs-toggle="tooltip"
+                                                                <a href="#" class="adjust_shoot_tax"
                                                                     data-bs-original-title="Adjust Tax"
-                                                                    data-shoot-tax="6.00" class="adjust_shoot_tax">
+                                                                    data-shoot-tax="6.00" data-bs-toggle="modal"
+                                                                    data-bs-target="#adjust-tax">
                                                                     Tax (6%)
                                                                 </a>
                                                             </div>
@@ -7446,10 +7424,112 @@
                                         </div>
                                     </div>
 
+                                    <!-- Modal for Coupon Input -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="mt-4">
+                                            <div class="modal modal-transparent fade" id="modals-transparent"
+                                                tabindex="-1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <a href="javascript:void(0);" class="btn-close text-white"
+                                                            data-bs-dismiss="modal" aria-label="Close"></a>
+                                                        <div class="modal-body">
+                                                            <div class="input-group input-group-lg mb-4">
+                                                                <input type="text"
+                                                                    class="form-control bg-white border-0"
+                                                                    placeholder="Enter Coupon Code"
+                                                                    aria-describedby="submit" />
+                                                                <button class="btn btn-primary" type="button"
+                                                                    id="submit">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal for Adjust Quote -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="mt-4">
+                                            <div class="modal modal-transparent fade" id="adjust-quote" tabindex="-1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <a href="javascript:void(0);" class="btn-close text-white"
+                                                            data-bs-dismiss="modal" aria-label="Close"></a>
+                                                        <div class="modal-body">
+                                                            <p class="text-black text-xl-center fw-bold mb-4">Adjust
+                                                                Quote</p>
+                                                            <div class="input-group input-group-lg mb-4">
+                                                                <input type="text"
+                                                                    class="form-control bg-white border-0" value="0.00"
+                                                                    aria-describedby="submit" />
+                                                                <button class="btn btn-primary" type="button"
+                                                                    id="save">Save</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal for Adjust Tax -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="mt-4">
+                                            <div class="modal modal-transparent fade" id="adjust-tax" tabindex="-1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <a href="javascript:void(0);" class="btn-close text-white"
+                                                            data-bs-dismiss="modal" aria-label="Close"></a>
+                                                        <div class="modal-body">
+                                                            <p class="text-black text-xl-center fw-bold mb-4">Adjust Tax
+                                                            </p>
+                                                            <div class="input-group input-group-lg mb-4">
+                                                                <input type="text"
+                                                                    class="form-control bg-white border-0" value="6.00"
+                                                                    aria-describedby="submit" />
+                                                                <button class="btn btn-primary" type="button"
+                                                                    id="save">Save</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal for Adjust Duration -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mt-4">
+                                            <div class="modal modal-transparent fade" id="adjust-duration"
+                                                tabindex="-1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <a href="javascript:void(0);" class="btn-close text-white"
+                                                            data-bs-dismiss="modal" aria-label="Close"></a>
+                                                        <div class="modal-body">
+                                                            <p class="text-black text-xl-center fw-bold mb-4">Adjust Duration
+                                                            </p>
+                                                            <div class="input-group input-group-lg mb-4">
+                                                                <input type="text"
+                                                                    class="form-control bg-white border-0" value="0"
+                                                                    aria-describedby="submit" />
+                                                                <button class="btn btn-primary" type="button"
+                                                                    id="save">Save</button>
+                                                            </div>
+                                                            <div class="alert alert-warning small fst-italic mt-3 text-nowrap text-center">Note: A duration of 0 is zero.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="card-body" style="padding: 0 !important;">
                                         <div class="d-flex flex-column justify-content-center align-items-center">
 
-                                            <div id="additional_settings_button_container">
+                                            <div id="additional_settings_button_container ">
                                                 <a href="#" id="additional_settings_button">(Additional
                                                     Settings)</a>
                                             </div>
@@ -7518,7 +7598,7 @@
                                                             data-bs-toggle="tooltip"
                                                             data-bs-original-title="Send Notification"
                                                             data-request-id="120374" data-send-notification="1">
-                                                            <i class="fa fa-solid fa-envelope me-2"></i>
+                                                            <i class="ti ti-mail me-2"></i>
                                                             Schedule Appointment
                                                         </button>
                                                         <button
@@ -7526,7 +7606,7 @@
                                                             data-bs-toggle="tooltip"
                                                             data-bs-original-title="Don't Send Notification"
                                                             data-request-id="120374" data-send-notification="0">
-                                                            <i class="fak fa-solid-envelope-circle-xmark"></i>
+                                                            <i class="ti ti-mail-cancel"></i>
                                                         </button>
                                                     </div>
                                                 </div>

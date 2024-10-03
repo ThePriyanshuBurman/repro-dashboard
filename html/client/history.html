@@ -380,24 +380,21 @@
         <!-- Footer -->
         <footer class="content-footer footer bg-footer-theme">
           <div class="container-xxl">
-            <div
-              class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
-              <div class="text-body">
-                ©
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                , R/E Pro Photos. All Rights Reserved.
+              <div class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
+                  <div class="text-body">
+                      ©
+                      <script>
+                          document.write(new Date().getFullYear());
+                      </script>
+                      , R/E Pro Photos. All Rights Reserved.
+                  </div>
+                  <div class="d-none d-lg-inline-block">
+                      <a href="https://pro.reprophotos.com/privacy_policy.php" class="footer-link me-4" target="_blank">Privacy Policy</a>
+                      <a href="https://pro.reprophotos.com/terms_of_use.php" target="_blank" class="footer-link me-4">Terms of Use</a>
+                  </div>
               </div>
-              <div class="d-none d-lg-inline-block">
-                <a href="https://pro.reprophotos.com/privacy_policy.php" class="footer-link me-4"
-                  target="_blank">Privacy Policy</a>
-                <a href="https://pro.reprophotos.com/terms_of_use.php" target="_blank" class="footer-link me-4">Terms of
-                  Use</a>
-              </div>
-            </div>
           </div>
-        </footer>
+      </footer>
         <!-- / Footer -->
 
         <div class="content-backdrop fade"></div>
@@ -414,6 +411,22 @@
   <div class="drag-target"></div>
   </div>
   <!-- / Layout wrapper -->
+  <style>
+    html, body {
+      height: 100%;
+    }
+  
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+  
+    .content-footer {
+      margin-top: auto; /* Pushes the footer to the bottom */
+    }
+  </style>
 
   <!-- jQuery and Bootstrap JS for modal functionality -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

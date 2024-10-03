@@ -9,7 +9,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Accounts - R/E Pro Photos</title>
+    <title>Contact - R/E Pro Photos</title>
 
     <meta name="description" content="" />
 
@@ -34,18 +34,15 @@
 
     <link rel="stylesheet" href="../../assets/css/demo.css" />
 
-  <!-- Vendors CSS -->
-  <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/select2/select2.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/@form-validation/form-validation.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/quill/typography.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/quill/katex.css" />
-  <link rel="stylesheet" href="../../assets/vendor/libs/quill/editor.css" />
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
+
+    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/@form-validation/form-validation.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/animate-css/animate.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/sweetalert2/sweetalert2.css" />
 
     <!-- Page CSS -->
 
@@ -63,7 +60,7 @@
         <div class="layout-container">
             <!-- Menu -->
 
-            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" data-bg-class="bg-menu-theme" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
                 <div class="app-brand demo">
                     <a href="index.html" class="app-brand-link">
                         <span class="app-brand-logo demo">
@@ -96,9 +93,9 @@
 
                 <div class="menu-inner-shadow"></div>
 
-                <ul class="menu-inner py-1">
+                <ul class="menu-inner py-1 ps--active-y">
                     <!-- Dashboards -->
-                    <li class="menu-item active">
+                    <li class="menu-item active open">
                         <a href="dashboard.html" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-dashboard"></i>
                             <div data-i18n="Dashboard">Dashboard</div>
@@ -262,7 +259,7 @@
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
                         <div class="navbar-nav align-items-center justify-content-center flex-grow-1">
-                            <h4 class="m-0 p-0">Accounts</h4>
+                            <h4 class="m-0 p-0">Contact Us</h4>
                         </div>
 
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -629,350 +626,93 @@
                 <div class="content-wrapper">
                     <!-- Content -->
 
-                    <div class="container-xxl flex-grow-1 container-p-y">
-                        <div class="accounts-information">
-                            <div class="alert alert-primary text-center" role="alert">Manage client accounts and Tour
-                                Branding
-                                information.</div>
-                            <div class="alert alert-warning text-center" role="alert">
-                                The below table shows Client Login Accounts. To edit/modify <a
-                                    href="tour-branding-info.html" class="alert-link"> Tour Branding Info, click
-                                    here.</a></div>
-                            <div class="alert alert-info text-center" role="alert">
-                                There are (35) client accounts that are not directly linked to a Branding Info
-                                record.<br>
-                                <a href="linkClient.html" class="alert-link">You can link these client accounts to
-                                    Branding Info
-                                    here.</a>
-                            </div>
-                            <!-- Category List Table -->
-                            <div class="card">
-                                <div class="card-datatable table-responsive">
-                                    <table class="datatables-category-list table border-top">
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th>Name</th>
-                                                <th>Shoots</th>
-                                                <th>Account Type</th>
-                                                <th class="text-nowrap text-sm-end">Company</th>
-                                                <th class="text-nowrap text-sm-end">Phone</th>
-                                                <th class="text-lg-center">Actions</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
+                    <section id="landingContact" class="section-py bg-body landing-contact">
+                        <div class="container">
+                          <h4 class="text-center mb-1 mt-4">
+                            <span class="position-relative fw-extrabold z-1">Let's Connect
+                              <img src="../../assets/img/front-pages/icons/section-title-icon.png" alt="laptop charging"
+                                class="section-title-img position-absolute object-fit-contain bottom-0 z-n1">
+                            </span>
+                            together
+                          </h4>
+                          <p class="text-center mb-12 pb-md-4">Any question or remark? just write us a message</p>
+                          <div class="row g-6">
+                            <div class="col-lg-5">
+                              <div class="contact-img-box position-relative border p-2 h-100">
+                                <img src="../../assets/img/front-pages/icons/contact-border.png" alt="contact border"
+                                  class="contact-border-img position-absolute d-none d-lg-block scaleX-n1-rtl">
+                                <img src="../../assets/img/front-pages/landing-page/contact-customer-service.png"
+                                  alt="contact customer service" class="contact-img w-100 scaleX-n1-rtl">
+                                <div class="p-4 pb-2">
+                                  <div class="d-flex flex-column gap-4">
+                                    <div class="col-md-6 col-lg-12 col-xl-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="badge bg-label-primary rounded p-1_5 me-3"><i class="ti ti-mail ti-lg"></i>
+                                        </div>
+                                        <div>
+                                          <p class="mb-0">Email</p>
+                                          <h6 class="mb-0"><a href="mailto:contact@reprophotos.com"
+                                              class="text-heading">contact@reprophotos.com</a></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-12 col-xl-6">
+                                      <div class="d-flex align-items-center">
+                                        <div class="badge bg-label-success rounded p-1_5 me-3"><i
+                                            class="ti ti-phone-call ti-lg"></i></div>
+                                        <div>
+                                          <p class="mb-0">Phone</p>
+                                          <h6 class="mb-0"><a href="tel:(+1) (202) 868-1663" class="text-heading text-nowrap">(+1)
+                                              (202) 868-1663</a></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
+                              </div>
                             </div>
-                            <!-- Offcanvas to add new customer -->
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasAccounts"
-                                aria-labelledby="offcanvasAccountsLabel">
-                                <!-- Offcanvas Header -->
-                                <div class="offcanvas-header py-6">
-                                    <h5 id="offcanvasAccountsLabel" class="offcanvas-title">Update Info</h5>
-                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
+                            <div class="col-lg-7">
+                              <div class="card h-100">
+                                <div class="card-body">
+                                  <h4 class="mb-2">Send a message</h4>
+                                  <p class="mb-6">
+                                    If you would like to discuss anything related to payment, account, licensing,<br
+                                      class="d-none d-lg-block">
+                                    partnerships, or have pre-sales questions, you’re at the right place.
+                                  </p>
+                                  <form>
+                                    <div class="row g-4">
+                                      <div class="col-md-6">
+                                        <label class="form-label" for="contact-form-fullname">Full Name</label>
+                                        <input type="text" class="form-control" id="contact-form-fullname" placeholder="John Doe">
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label class="form-label" for="contact-form-email">Email</label>
+                                        <input type="text" id="contact-form-email" class="form-control"
+                                          placeholder="johndoe@gmail.com">
+                                      </div>
+                                      <div class="col-12">
+                                        <label class="form-label" for="contact-form-message">Message</label>
+                                        <textarea id="contact-form-message" class="form-control" rows="7"
+                                          placeholder="Write a message"></textarea>
+                                      </div>
+                                      <div class="col-12">
+                                        <button type="submit" class="btn btn-primary waves-effect waves-light">Send inquiry</button>
+                                      </div>
+                                    </div>
+                                  </form>
                                 </div>
-                                <!-- Offcanvas Body -->
-                                <div class="offcanvas-body border-top">
-                                    <form class="pt-0" id="accountsForm" onsubmit="return true">
-                                        <!-- Title -->
-                                        <div class="mb-6">
-                                            <label class="form-label" for="accounts-name">Name</label>
-                                            <input type="text" class="form-control" id="accounts" name="name"
-                                                aria-label="name" value="" placeholder="Enter Name" />
-                                        </div>
-                                        <!-- Slug -->
-                                        <div class="mb-6">
-                                            <label class="form-label" for="accounts-email">Email</label>
-                                            <input type="email" id="accounts-email" class="form-control"
-                                                placeholder="Enter email" aria-label="email" name="email" value="" />
-                                        </div>
-                                        <!-- Direct Phone -->
-                                        <div class="mb-6">
-                                            <label class="form-label" for="direct-phone">Direct Phone</label>
-                                            <div class="input-group">
-                                                <span class="input-group-text">US (+1)</span>
-                                                <input type="text" id="direct-phone" class="form-control"
-                                                    aria-label="direct-phone" name=direct phone"
-                                                    value="(555) 555-5555" />
-                                            </div>
-                                        </div>
-                                        <!-- Company Phone -->
-                                        <div class="mb-6">
-                                            <label class="form-label" for="company-phone">Company Phone</label>
-                                            <div class="input-group">
-                                                <span class="input-group-text">US (+1)</span>
-                                                <input type="text" id="company-phone" class="form-control"
-                                                    aria-label="company-phone" name="company phone"
-                                                    placeholder="(555) 555-5555" />
-                                            </div>
-                                        </div>
-                                        <!-- Company -->
-                                        <div class="mb-6">
-                                            <label class="form-label" for="accounts-company">Company</label>
-                                            <input type="text" id="accounts-company" class="form-control"
-                                                placeholder="Reality Company LLC" aria-label="accounts-company"
-                                                name="tour branding company" />
-                                        </div>
-                                        <!-- License -->
-                                        <div class="mb-6">
-                                            <label class="form-label" for="accounts-license">License #</label>
-                                            <input type="text" id="accounts-license" class="form-control"
-                                                placeholder="LI0123456" aria-label="accounts-license" name="license" />
-                                        </div>
-                                        <!-- Website -->
-                                        <div class="mb-6">
-                                            <label class="form-label" for="accounts-website">Website</label>
-                                            <input type="text" id="accounts-website" class="form-control"
-                                                placeholder="https://www.RealtyCompanyLLC.com"
-                                                aria-label="accounts-website" name="website" />
-                                        </div>
-                                        <!-- Account Type -->
-                                        <div class="mb-4">
-                                            <label for="defaultSelect" class="form-label">Account Type</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option value="1">Admin</option>
-                                                <option value="2">Client</option>
-                                                <option value="3">Editor</option>
-                                                <option value="3">Photographer</option>
-                                                <option value="3">Reps</option>
-                                            </select>
-                                        </div>
-                                        <!-- Account Type -->
-                                        <div class="mb-4">
-                                            <label for="defaultSelect" class="form-label">Created By</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option value="1">Admin</option>
-                                                <option value="2">Client</option>
-                                                <option value="3">Editor</option>
-                                                <option value="3">Photographer</option>
-                                                <option value="3">Reps</option>
-                                            </select>
-                                        </div>
-                                        <!-- <div class="col-md-6 mb-6">
-                            <label for="selectpickerLiveSearch" class="form-label">Live Search</label>
-                            <select
-                              id="selectpickerLiveSearch"
-                              class="selectpicker w-100"
-                              data-style="btn-default"
-                              data-live-search="true">
-                              <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
-                              <option data-tokens="mustard">Burger, Shake and a Smile</option>
-                              <option data-tokens="frosting">Sugar, Spice and all things nice</option>
-                            </select>
-                          </div> -->
-                                        <!-- Pricing -->
-                                        <div class="mb-4">
-                                            <label for="defaultSelect" class="form-label">Show Pricing</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option value="1">Yes</option>
-                                                <option value="2">No</option>
-                                            </select>
-                                        </div>
-                                        <!-- SlideShow Access -->
-                                        <div class="mb-4">
-                                            <label for="defaultSelect" class="form-label">SlideShow Access</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option>Default</option>
-                                                <option value="1">Disabled</option>
-                                                <option value="2">Enabled</option>
-                                            </select>
-                                        </div>
-                                        <!-- Text Colour -->
-                                        <div class="mb-4">
-                                            <label for="defaultSelect" class="form-label">Text Color</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option>Default</option>
-                                                <option value="1">Dark</option>
-                                                <option value="2">Light</option>
-                                            </select>
-                                        </div>
-                                        <!-- Payment Due Reminders -->
-                                        <div class="mb-4">
-                                            <label for="defaultSelect" class="form-label">Payment Due Reminders</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option value="1">On</option>
-                                                <option value="2">Off</option>
-                                            </select>
-                                        </div>
-                                        <!-- Coupon Code -->
-                                        <div class="mb-4">
-                                            <label for="defaultSelect" class="form-label">Coupon Code</label>
-                                            <select id="defaultSelect" class="form-select">
-                                                <option>None</option>
-                                                <option value="1">5OFF</option>
-                                                <option value="2">100OFF</option>
-                                                <option value="3">250OFF</option>
-                                                <option value="4">400OFF</option>
-                                                <option value="5">500OFF</option>
-                                                <option value="6">750OFF</option>
-                                                <option value="7">KCRE</option>
-                                                <option value="8">LIV10</option>
-                                                <option value="9">MAXXUM</option>
-                                                <option value="10">VIP5OFF</option>
-                                                <option value="11">VIP10OFF</option>
-                                                <option value="12">VIP15OFF</option>
-                                                <option value="13">VIP20OFF</option>
-                                                <option value="14">WEICHERT149</option>
-                                            </select>
-                                        </div>
-                                        <!-- Company Notes -->
-                                        <div class="mb-4">
-                                            <h5 class="card-header form-label">Company Notes</h5>
-                                            <div class="card-body">
-                                                <textarea id="autosize-demo" rows="3" class="form-control"
-                                                    placeholder="Notes for the specific client, only visible to company admin."></textarea>
-                                            </div>
-                                        </div>
-                                        <!-- /Autosize -->
-                                        <div class="mb-4 flex justify-content-center">
-                                            <label class="switch">
-                                                <input type="checkbox" class="switch-input" />
-                                                <span class="switch-toggle-slider">
-                                                    <span class="switch-on"></span>
-                                                    <span class="switch-off"></span>
-                                                </span>
-                                                <span class="switch-label">Send Notification</span>
-                                            </label>
-                                        </div>
-                                        <!-- Submit and reset -->
-                                        <div class="mb-8">
-                                            <button type="submit"
-                                                class="btn btn-primary me-sm-3 me-1 data-submit">Update</button>
-                                            <button type="reset" class="btn btn-label-danger"
-                                                data-bs-dismiss="offcanvas">Cancel</button>
-                                        </div>
-                                    </form>
-                                </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
+                      </section>
                     <!-- / Content -->
-                    <!-- photographer order -->
-                    <div class="row mb-6">
-                        <div class="col-12">
-                            <div class="card custom-card mx-auto" style="width: 45%;">
-                                <h5 class="card-header text-center">Photographer Order</h5>
-                                <div class="card-body text-center">
-                                    <p>Drag/drop photographer accounts into the order you would like them displayed
-                                        during booking.</p>
-                                    <ul class="list-group list-group-flush" id="pending-tasks">
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>R/E Pro Photos Editor</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Nate Gregorio</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Harrison Hart</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Delmar Harrod</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>KK-Kumnith Keo</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Jay Snap</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Alaina Benenati</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Monte Cansler</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Brandon Clark</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Bennett Cohen</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Brent Custer</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Christina Forney</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Hannah Haley</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>David Hunsinger</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Hue Lam</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Aaron Mertes</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Adrianna Mills</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Lucia Oberg</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Chris Pirone</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Todd Sacks</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Kira Siems</span>
-                                        </li>
-                                        <li class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center"
-                                            <span>David Mandragon</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Paul Taliterro</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Lee Tomassetti</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Kevin Weininger</span>
-                                        </li>
-                                        <li
-                                            class="list-group-item drag-item cursor-move d-flex justify-content-between align-items-center">
-                                            <span>Adrian O'Dell</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- / photographer order -->
                     <!-- Footer -->
                     <footer class="content-footer footer bg-footer-theme">
                         <div class="container-xxl">
-                            <div
-                                class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
+                            <div class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
                                 <div class="text-body">
                                     ©
                                     <script>
@@ -981,10 +721,8 @@
                                     , R/E Pro Photos. All Rights Reserved.
                                 </div>
                                 <div class="d-none d-lg-inline-block">
-                                    <a href="https://pro.reprophotos.com/privacy_policy.php" class="footer-link me-4"
-                                        target="_blank">Privacy Policy</a>
-                                    <a href="https://pro.reprophotos.com/terms_of_use.php" target="_blank"
-                                        class="footer-link me-4">Terms of Use</a>
+                                    <a href="https://pro.reprophotos.com/privacy_policy.php" class="footer-link me-4" target="_blank">Privacy Policy</a>
+                                    <a href="https://pro.reprophotos.com/terms_of_use.php" target="_blank" class="footer-link me-4">Terms of Use</a>
                                 </div>
                             </div>
                         </div>
@@ -1005,7 +743,22 @@
         <div class="drag-target"></div>
     </div>
     <!-- / Layout wrapper -->
-
+    <style>
+        html, body {
+          height: 100%;
+        }
+      
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          margin: 0;
+        }
+      
+        .content-footer {
+          margin-top: auto; /* Pushes the footer to the bottom */
+        }
+      </style>
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
 
@@ -1015,26 +768,17 @@
     <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
     <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
+
     <script src="../../assets/vendor/js/menu.js"></script>
 
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="../../assets/vendor/libs/moment/moment.js"></script>
-    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-    <script src="../../assets/vendor/libs/select2/select2.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/popular.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/bootstrap5.js"></script>
-    <script src="../../assets/vendor/libs/@form-validation/auto-focus.js"></script>
-    <script src="../../assets/vendor/libs/quill/katex.js"></script>
-    <script src="../../assets/vendor/libs/quill/quill.js"></script>
-
 
     <!-- Main JS -->
     <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="../../assets/js/admin/accounts.js"></script>
 </body>
 
 </html>

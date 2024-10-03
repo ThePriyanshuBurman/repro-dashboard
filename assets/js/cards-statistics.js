@@ -584,7 +584,7 @@
         type: 'radialBar'
       },
       colors: [config.colors.warning],
-      series: [78],
+      series: [100],
       plotOptions: {
         radialBar: {
           offsetY: 0,
@@ -726,7 +726,6 @@
     const expensesRadialChart = new ApexCharts(expensesRadialChartEl, expensesRadialChartConfig);
     expensesRadialChart.render();
   }
-
   // Impression This Week
   // --------------------------------------------------------------------
   const impressionThisWeekEl = document.querySelector('#impressionThisWeek'),
