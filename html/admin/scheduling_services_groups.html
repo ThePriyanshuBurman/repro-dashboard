@@ -9,7 +9,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Archieve Queue - R/E Pro Photos</title>
+    <title>Scheduling - R/E Pro Photos</title>
 
     <meta name="description" content="" />
 
@@ -60,7 +60,7 @@
         <div class="layout-container">
             <!-- Menu -->
 
-            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" data-bg-class="bg-menu-theme" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                 <div class="app-brand demo">
                     <a href="index.html" class="app-brand-link">
                         <span class="app-brand-logo demo">
@@ -93,7 +93,7 @@
 
                 <div class="menu-inner-shadow"></div>
 
-                <ul class="menu-inner py-1 ps--active-y">
+                <ul class="menu-inner py-1">
                     <!-- Dashboards -->
                     <li class="menu-item active open">
                         <a href="dashboard.html" class="menu-link">
@@ -220,7 +220,7 @@
                                     <div data-i18n="Discounts">Discounts</div>
                                 </a>
                             </li>
-                            
+
                         </ul>
                     </li>
                     <li class="menu-item">
@@ -259,11 +259,11 @@
                     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
                         <div class="navbar-nav align-items-center justify-content-center flex-grow-1">
-                            <h4 class="m-0 p-0">Archieve Queue</h4>
+                            <h4 class="m-0 p-0">Scheduling</h4>
                         </div>
 
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
-                            
+
 
                             <!-- Style Switcher -->
                             <li class="nav-item dropdown-style-switcher dropdown">
@@ -627,15 +627,258 @@
                     <!-- Content -->
 
                     <div class="container-xxl flex-grow-1 container-p-y">
-                        <div class="archieveQueue-information">
-                            <div class="alert alert-primary text-center" role="alert">View a list of shoots that will
-                                soon be archived.</div>
-                            <div class="alert alert-dark d-flex justify-content-center">
-                                <div class="alert alert-danger text-center" style="width: 50%;">
-                                    We have not yet enabled Auto Archiving.<br>
-                                    <span class="fw-bold">Don't worry, your shoots will remain stored on our
-                                        end!</span><br>
-                                    We will notify you when auto archiving is turned on.
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-primary text-center" role="alert">Manage if/how clients can
+                                    request appointments, what information is requested, what services are available for
+                                    booking, etc.</div>
+                                <!-- <div class="nav-align-top">
+                                    <ul class="nav nav-pills flex-row mb-6 gap-2">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="javascript:void(0);">
+                                                <i class="ti-sm ti ti-users me-1_5"></i> Services
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="scheduling_services_groups.html">
+                                                <i class="ti-sm ti ti-lock me-1_5"></i> Service Groups
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="scheduling_clients.html">
+                                                <i class="ti-sm ti ti-bell me-1_5"></i> Client Scheduling
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="scheduling_additional_fields.html">
+                                                <i class="ti-sm ti ti-bell me-1_5"></i> Additional Fields
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> -->
+
+                                <div class="card mb-6">
+                                    <!-- Services -->
+                                    <div class="nav-align-top m-4">
+                                        <ul class="nav nav-pills flex-row mb-6 gap-2">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="scheduling_services.html"><i
+                                                        class="ti-sm ti ti-users me-1_5"></i> Services</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="scheduling_services_groups.html">
+                                                    <i class="ti-sm ti ti-lock me-1_5"></i> Service Groups
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="scheduling_clients.html">
+                                                    <i class="ti-sm ti ti-bell me-1_5"></i> Client Scheduling
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="scheduling_additional_fields.html">
+                                                    <i class="ti-sm ti ti-bell me-1_5"></i> Additional Fields
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="scheduling-services d-flex justify-content-center">
+                                        <div class="alert alert-dark  text-center" style="width: 95%;">
+                                            <div class="fs-5">Service Groups allow you to create groups of services that
+                                                can be limited to selection on an individual client basis.</div>
+                                            <i>Offer different services/pricing for different service areas or
+                                                clients.</i><br>
+                                            <i class="small text-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalLong" style="cursor: pointer;">(Learn More)</i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal for learn more -->
+                                    <div class="modal fade" id="modalLong" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary d-flex justify-content-between align-items-center pb-3">
+                                                    <h5 class="modal-title text-white mx-auto" id="modalLongTitle">Service Groups</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>                                                
+                                                <div class="modal-body">
+                                                    <p class="text-center">Service Groups allow you to offer specific services to specific clients.</p>
+                                                    <p class="text-center">This is a great way to offer different services/packages to specific clients, whether that's based on location if you service multiple areas, or if you simply have varying rates for different clients.</p>
+                                                    <p class="text-center">You can then assign client accounts to a specific service group to define what services they can book.</p>
+                                                    <ol class="text-start">
+                                                        <li>Create Service Groups
+                                                            <ul>
+                                                                <li class="small">Each Service Group is a category or bucket of services that you want to place clients into.</li>
+                                                                <li class="small">When you create your first Service Group we'll place all of your existing services into the new group.</li>
+                                                                <li class="small">We'll also place all of your existing clients into the Service Group.</li>
+                                                                <li class="small">This will allow all existing clients to book any existing service, just like it is today.</li>
+                                                                <li class="small">Your first Service Group is considered your base or default Service Group.</li>
+                                                                <li class="small">All new accounts will default to being placed in this group.</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>Update Services
+                                                            <ul>
+                                                                <li class="small">Under Services, modify the Service Group(s) of each service by clicking the label above the service.</li>
+                                                                <li class="small">You can place a service under one or multiple Service Groups.</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>Update Client Accounts
+                                                            <ul>
+                                                                <li class="small">After creating service groups, the Settings -> Accounts page will list the available service groups for each account.</li>
+                                                                <li class="small">Click on the service group button for each account to adjust that account's service groups.</li>
+                                                                <li class="small">A client can have access to none, one, or multiple Service Groups.</li>
+                                                                <li class="small">With service groups ON, a client account that is not attached to any service groups will not have access to the Book page.</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>Enable Service Groups
+                                                            <ul>
+                                                                <li class="small">Enable Service Groups by clicking the toggle at the top of the page.</li>
+                                                                <li class="small">When Service Group functionality is disabled, all clients that have access to the Book page can see and select from any available service during booking.</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enable/Disable -->
+                                    <div class="d-flex justify-content-center">
+                                        <label class="switch switch-xl">
+                                            <input type="checkbox" class="switch-input"
+                                                id="service_groups_enable_disable">
+                                            <span class="switch-toggle-slider">
+                                                <span class="switch-on">
+                                                    <i class="ti ti-check"></i>
+                                                </span>
+                                                <span class="switch-off">
+                                                    <i class="ti ti-x"></i>
+                                                </span>
+                                            </span>
+                                            <span class="switch-label">Disabled</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <div class="mb-4 mt-2 text-nowrap" id="pricing-notice" style="width: 80%;">
+                                            <div class="alert alert-warning mt-2 text-center">
+                                                <div><b>Service groups are Disabled.</b></div>
+                                                <div>All clients who have access to the Book page can see and select
+                                                    from any available service during booking.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-cols-1 row-cols-md-4 mb-2 d-flex justify-content-center"
+                                        id="company_service_groups">
+                                        <div class="col mb-2 service_group" id="service_group_1">
+                                            <div class="card h-100 border rounded ">
+                                                <div class="card-body pb-0">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <h5 class="card-title service_group_title mb-0">RE Pro Photos
+                                                        </h5>
+                                                        <!-- <div class="rounded border border-grey service_group_color"
+                                                            style="background-color: #46abfa; width:30px; height:30px;">
+                                                        </div> -->
+                                                    </div>
+                                                    <span class="badge bg-label-primary is_default">Default</span>
+                                                </div>
+                                                <div
+                                                    class="card-footer d-flex justify-content-evenly align-items-center pt-3">
+                                                    <a class="btn btn-primary edit_service_group text-white waves-effect waves-light"
+                                                        data-bs-toggle="modal" data-bs-target="#modalCenter"
+                                                        data-service-group-id="1"
+                                                        data-service-group-name="RE Pro Photos"
+                                                        data-service-group-color="#46abfa"
+                                                        data-service-group-default="1">
+                                                        Edit
+                                                    </a>
+                                                    <i class="ti ti-trash-filled fs-30 text-grey"
+                                                        data-bs-toggle="tooltip"
+                                                        data-bs-original-title="Your initial Service Group cannot be deleted."></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal for edit/add service group -->
+                                        <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                                                <!-- Change to modal-sm -->
+                                                <div class="modal-content">
+                                                    <div
+                                                        class="modal-header d-flex justify-content-between align-items-center bg-primary pb-2">
+                                                        <h5 class="modal-title mx-auto text-white"
+                                                            id="modalCenterTitle">Edit Service Group</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col mb-4">
+                                                                <label for="serviceGroupName" class="form-label">Service
+                                                                    Group Name</label>
+                                                                <input type="text" id="serviceGroupName"
+                                                                    class="form-control"
+                                                                    placeholder="Enter Service Group Name" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-4">
+                                                            <div
+                                                                class="form-check form-check-primary mt-3 d-flex justify-content-center align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="service_group_default"
+                                                                    name="service_group_default" checked="" disabled="">
+                                                                <label class="form-check-label"
+                                                                    for="service_group_default">Make Default</label>
+                                                                <a class="text-primary" data-bs-toggle="popover"
+                                                                    data-bs-trigger="click" data-bs-placement="bottom"
+                                                                    data-bs-html="true"
+                                                                    data-bs-original-title="Service Group Default"
+                                                                    data-bs-content="When a new user account is created, the default Service Group will be attached to the account.<div class='mt-3 fst-italic text-muted text-center small'>You can change service groups attached to a user account under Settings -> Accounts, or during the account creation process.</div>">
+                                                                    <i
+                                                                        class="help-icon text-primary ti ti-help-circle"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-label-secondary"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save
+                                                            changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col mb-2" id="new_service_group_container"
+                                            style="min-height: 150px;">
+                                            <div class="card h-100 border rounded">
+                                                <div
+                                                    class="card-body py-0 d-flex justify-content-center align-items-center">
+                                                    <div class="text-center">
+                                                        <button
+                                                            class="btn btn-primary waves-effect waves-light d-flex align-items-center justify-content-center"
+                                                            data-bs-toggle="modal" data-bs-target="#modalCenter">
+                                                            <i class="ti ti-circle-plus me-2"></i>
+                                                            <!-- Add an icon with margin to the right -->
+                                                            Add New Service Group
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!-- /Account -->
                                 </div>
                             </div>
                         </div>
@@ -679,7 +922,14 @@
         <div class="drag-target"></div>
     </div>
     <!-- / Layout wrapper -->
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl);
+            });
+        });
+    </script>
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
 
@@ -689,17 +939,26 @@
     <script src="../../assets/vendor/libs/node-waves/node-waves.js"></script>
     <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-
+    <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
     <script src="../../assets/vendor/js/menu.js"></script>
 
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="../../assets/vendor/libs/select2/select2.js"></script>
+    <script src="../../assets/vendor/libs/@form-validation/popular.js"></script>
+    <script src="../../assets/vendor/libs/@form-validation/bootstrap5.js"></script>
+    <script src="../../assets/vendor/libs/@form-validation/auto-focus.js"></script>
+    <script src="../../assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="../../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="../../assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
 
     <!-- Main JS -->
     <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
+    <script src="../../assets/js/pages-account-settings-account.js"></script>
 </body>
 
 </html>
